@@ -55,7 +55,9 @@ function takeCommand(message) {
         openWebsite("https://google.com", "Google");
     } else if (lowerCaseMessage.includes("open youtube")) {
         openWebsite("https://youtube.com", "Youtube");
-    } else if (lowerCaseMessage.includes("open facebook")) {
+    } else if (lowerCaseMessage.includes("open music")) {
+        openWebsite("https://music.youtube.com", "Youtube Music");
+    }  else if (lowerCaseMessage.includes("open facebook")) {
         openWebsite("https://facebook.com", "Facebook");
     } else if (lowerCaseMessage.includes("open instagram")) {
         openWebsite("https://www.instagram.com", "Instagram");
