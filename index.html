@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N O V A</title>
+    <meta name="description" content="Welcome to N O V A, your virtual assistant for all your needs. Get help with tasks, find information, and much more.">
+    <meta name="keywords" content="N O V A, virtual assistant, AI assistant, tasks, information, help">
+    <meta name="author" content="Ayn Bhaumik">
+    <link rel="shortcut icon" href="./assets/f.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <section class="main">
+        <div class="image-container">
+            <div class="image">
+                <img id="random-image" src="" alt="image">
+            </div>
+            <h1>N O V A</h1>
+            <p>I'm a Virtual Assistant N O V A, How may I help you?</p>
+        </div>
+    
+        <script>
+            const imageUrls = [
+                "./assets/tumblr_.webp",
+                "./assets/blc.gif",
+                "./assets/artifact.gif",
+                "./assets/giphy11.webp",
+                "./assets/giphy22.webp",
+                
+            ];           
+            const randomIndex = Math.floor(Math.random() * imageUrls.length);
+            document.getElementById("random-image").src = imageUrls[randomIndex];
+        </script>
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+            <h1 class="content"> Click here to speak</h1>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
