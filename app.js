@@ -47,8 +47,10 @@ btn.addEventListener('click', () => {
 function takeCommand(message) {
     const lowerCaseMessage = message.toLowerCase();
     
-    if (lowerCaseMessage.includes('hey') || lowerCaseMessage.includes('hello')) {
+    if (lowerCaseMessage.includes('hey') || lowerCaseMessage.includes('hey nova') || lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hello nova')) {
         speak("Hello Boss, How May I Help You?");
+    } else if (lowerCaseMessage.includes("what's your name")) {
+        speak("I am your virtual assistant. You can call me NOVA, or just ask me anything you need!");
     } else if (lowerCaseMessage.includes("open google")) {
         openWebsite("https://google.com", "Google");
     } else if (lowerCaseMessage.includes("open youtube")) {
@@ -57,7 +59,7 @@ function takeCommand(message) {
         openWebsite("https://facebook.com", "Facebook");
     } else if (lowerCaseMessage.includes("open instagram")) {
         openWebsite("https://www.instagram.com", "Instagram");
-    }else if (lowerCaseMessage.includes('what is') || lowerCaseMessage.includes('who is') || lowerCaseMessage.includes('what are')) {
+    } else if (lowerCaseMessage.includes('what is') || lowerCaseMessage.includes('who is') || lowerCaseMessage.includes('what are')) {
         searchOnGoogle(message);
     } else if (lowerCaseMessage.includes('wikipedia')) {
         searchOnWikipedia(message);
@@ -67,8 +69,6 @@ function takeCommand(message) {
         getDate();
     } else if (lowerCaseMessage.includes('calculator')) {
         openCalculator();
-    } else if (lowerCaseMessage.includes('weather')) {
-        openWebsite("https://www.weather.com", "Weather Website");
     } else if (lowerCaseMessage.includes('amazon')) {
         openWebsite("https://www.amazon.com", "Amazon");
     } else if (lowerCaseMessage.includes('jio cinema')) {
@@ -79,9 +79,20 @@ function takeCommand(message) {
         openWebsite("https://www.crunchyroll.com", "Crunchyroll");
     } else if (lowerCaseMessage.includes('hotstar')) {
         openWebsite("https://www.hotstar.com", "Hotstar");
-    }else {
+    } else if (lowerCaseMessage.includes('how are you')) {
+        speak("Thank you for asking! I'm here to assist you.");
+    } else if (lowerCaseMessage.includes('what can you do')) {
+        speak("I can help you with tasks such as searching the web, providing information, setting reminders, and much more. Just let me know what you need!");
+    } else if (lowerCaseMessage.includes('thank you')) {
+        speak("You're welcome! Let me know if there's anything else I can help with.");
+    } else if (lowerCaseMessage.includes('goodbye') || lowerCaseMessage.includes('bye')) {
+        speak("Goodbye! Take care.");
+    } else if (lowerCaseMessage.includes('refresh')) {
+        refreshPage();
+    } else {
         searchOnGoogle(message);
     }
+    
 }
 
 function openWebsite(url, name) {
